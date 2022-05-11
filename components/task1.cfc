@@ -1,16 +1,18 @@
 <cffunction  name="display_message" hint="Show text based on number" access="remote">
     <cfset local.tes_num=arguments.test_num>
-    <cfif tes_num eq "1">
-        <cflocation url="../index.cfm?Message=1">
-        <cfelseif tes_num eq "2">
-        <cflocation url="../index.cfm?Message=2">
-        <cfelseif tes_num eq "3">
-        <cflocation url="../index.cfm?Message=3">
-        <cfelseif tes_num eq "4">
-        <cflocation url="../index.cfm?Message=4">
-        <cfelseif tes_num eq "5">
-        <cflocation url="../index.cfm?Message=6">
+    <cfset local.status="">
+    <cfif local.tes_num eq "1">
+            <cfset local.status="OK">      
+        <cfelseif local.tes_num eq "2">
+             <cfset local.status="OK">     
+        <cfelseif local.tes_num eq "3">
+             <cfset local.status="Good"> 
+        <cfelseif local.tes_num eq "4">
+             <cfset local.status="Fair"> 
+        <cfelseif local.tes_num eq "5">
+            <cfset local.status="Fair"> 
         <cfelse>
-        <cflocation url="../index.cfm?Message=Invalid">
+            <cfset local.status="Error">
     </cfif>
+        <cflocation url="../index.cfm?Message=#status#">
 </cffunction>

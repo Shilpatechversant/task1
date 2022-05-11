@@ -13,27 +13,7 @@
                         <cfoutput>
                             <cfif structKeyExists(url, "Message" )>
                                 <div class="alert alert-success col-lg-6 offset-lg-3" role="alert">
-                                    <cfif url.Message eq 1>                                   
-                                        ok                                   
-                                    </cfif>
-                                    <cfif url.Message eq 2>                               
-                                        ok                                
-                                    </cfif>
-                                    <cfif url.Message eq 3>                                 
-                                            fair                                    
-                                    </cfif>
-                                    <cfif url.Message eq 4>                                 
-                                            Good                                
-                                    </cfif>
-                                    <cfif url.Message eq 5>                                    
-                                            Very Good                               
-                                    </cfif>
-                                    <cfif url.Message eq 6>                                   
-                                            Fair                               
-                                    </cfif>
-                                    <cfif url.Message eq "Invalid">                               
-                                        Invalid Input                                   
-                                    </cfif>
+                                    <cfoutput>#url.Message# </cfoutput>                             
                                 </div>
                             </cfif>
                         </cfoutput>
